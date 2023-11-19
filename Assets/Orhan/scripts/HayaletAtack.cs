@@ -28,6 +28,7 @@ public class HayaletAtack : MonoBehaviour
         {
             // Oyuncuya saldýrma iþlemleri burada yapýlabilir.
             Debug.Log("Oyuncuya saldýr!");
+            
         }
     }
 }

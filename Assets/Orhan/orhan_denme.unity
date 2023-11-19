@@ -214,7 +214,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hedef: {fileID: 572989942}
   takipMesafesi: 5
-  hareketHizi: 5
+  hareketHizi: 3
+--- !u!114 &58498296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58498286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c47184a376314469005cd2f50961a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 572989942}
+  distanceThreshold: 0
+  moveSpeed: 3
 --- !u!1 &246155968
 GameObject:
   m_ObjectHideFlags: 0
@@ -19062,6 +19077,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7774052604453077478, guid: 00ca5d95404c3624e8391d2abb525180, type: 3}
       insertIndex: -1
       addedObject: {fileID: 58498292}
+    - targetCorrespondingSourceObject: {fileID: 7774052604453077478, guid: 00ca5d95404c3624e8391d2abb525180, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 58498296}
   m_SourcePrefab: {fileID: 100100000, guid: 00ca5d95404c3624e8391d2abb525180, type: 3}
 --- !u!1001 &7808567902190224301
 PrefabInstance:
