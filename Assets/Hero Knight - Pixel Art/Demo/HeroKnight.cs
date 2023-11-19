@@ -8,6 +8,8 @@ public class HeroKnight : MonoBehaviour {
     [SerializeField] float      m_rollForce = 6.0f;
     [SerializeField] bool       m_noBlood = false;
     [SerializeField] GameObject m_slideDust;
+    [SerializeField] private AudioSource AttackSound;
+    [SerializeField] private AudioSource EnergySound;
 
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
@@ -109,6 +111,7 @@ public class HeroKnight : MonoBehaviour {
         //Attack
         else if(Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f && !m_rolling)
         {
+            AttackSound.Play();
             m_currentAttack++;
 
             // Loop back to one after third attack
@@ -129,12 +132,16 @@ public class HeroKnight : MonoBehaviour {
         // Block
         else if (Input.GetMouseButtonDown(1) && !m_rolling)
         {
+            EnergySound.Play();
             m_animator.SetTrigger("Block");
             m_animator.SetBool("IdleBlock", true);
         }
 
         else if (Input.GetMouseButtonUp(1))
+        {
+            EnergySound.Play();
             m_animator.SetBool("IdleBlock", false);
+        }
 
         // Roll
         else if (Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
@@ -143,7 +150,7 @@ public class HeroKnight : MonoBehaviour {
             m_animator.SetTrigger("Roll");
             m_body2d.velocity = new Vector2(m_facingDirection * m_rollForce, m_body2d.velocity.y);
         }
-            
+
 
         //Jump
         else if (Input.GetKeyDown("space") && m_grounded && !m_rolling)
@@ -168,8 +175,8 @@ public class HeroKnight : MonoBehaviour {
         {
             // Prevents flickering transitions to idle
             m_delayToIdle -= Time.deltaTime;
-                if(m_delayToIdle < 0)
-                    m_animator.SetInteger("AnimState", 0);
+            if (m_delayToIdle < 0)
+                m_animator.SetInteger("AnimState", 0);
         }
     }
 
