@@ -10,6 +10,7 @@ public class HeroKnight : MonoBehaviour {
     [SerializeField] GameObject m_slideDust;
     [SerializeField] private AudioSource AttackSound;
     [SerializeField] private AudioSource EnergySound;
+    [SerializeField] private AudioSource JumpSound;
 
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
@@ -160,6 +161,7 @@ public class HeroKnight : MonoBehaviour {
             m_animator.SetBool("Grounded", m_grounded);
             m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
             m_groundSensor.Disable(0.2f);
+            JumpSound.Play();
         }
 
         //Run
