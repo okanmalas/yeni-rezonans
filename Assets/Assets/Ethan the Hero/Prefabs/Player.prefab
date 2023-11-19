@@ -186,7 +186,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.109375}
+    oldSize: {x: 4, y: 3.55}
     newSize: {x: 0.8, y: 0.71}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -234,10 +234,10 @@ MonoBehaviour:
   groundCheckSize: {x: 0.03, y: 0.03}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   wallLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
   WallCheck: {fileID: 4053226310138432}
   move: {x: 0, y: 0}
   isDashing: 0
