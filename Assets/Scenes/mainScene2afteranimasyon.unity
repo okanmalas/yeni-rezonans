@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 71663013}
   m_Layer: 0
   m_Name: etkilesim-grid
-  m_TagString: Untagged
+  m_TagString: ozel_block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 355879854}
   m_Layer: 0
   m_Name: map
-  m_TagString: Untagged
+  m_TagString: map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74900,7 +74900,7 @@ GameObject:
   - component: {fileID: 726232322}
   m_Layer: 0
   m_Name: map
-  m_TagString: Untagged
+  m_TagString: map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74979,7 +74979,7 @@ GameObject:
   - component: {fileID: 976322862}
   m_Layer: 0
   m_Name: background-grid
-  m_TagString: Untagged
+  m_TagString: map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75070,7 +75070,7 @@ GameObject:
   - component: {fileID: 1316081611}
   m_Layer: 0
   m_Name: etkilesim
-  m_TagString: ozel_tag
+  m_TagString: ozel_block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75632,7 +75632,7 @@ GameObject:
   - component: {fileID: 1390436574}
   m_Layer: 0
   m_Name: etkilesim
-  m_TagString: Untagged
+  m_TagString: ozel_block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75664,7 +75664,7 @@ GameObject:
   - component: {fileID: 1667132730}
   m_Layer: 0
   m_Name: map-empty
-  m_TagString: Untagged
+  m_TagString: map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75909,7 +75909,7 @@ GameObject:
   - component: {fileID: 1979129200}
   m_Layer: 0
   m_Name: map-grid
-  m_TagString: Untagged
+  m_TagString: map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
