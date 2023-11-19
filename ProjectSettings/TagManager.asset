@@ -8,6 +8,7 @@ TagManager:
   - ozel_block
   - ghost
   - ozel_tag
+  - map
   layers:
   - Default
   - TransparentFX

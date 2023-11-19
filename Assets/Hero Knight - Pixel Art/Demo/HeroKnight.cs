@@ -74,13 +74,14 @@ public class HeroKnight : MonoBehaviour {
         float inputX = Input.GetAxis("Horizontal");
 
         // Swap direction of sprite depending on walk direction
-        if (inputX > 0)
+        if (inputX > 0)//saga bakis y=0
         {
             GetComponent<SpriteRenderer>().flipX = false;
             m_facingDirection = 1;
+
         }
             
-        else if (inputX < 0)
+        else if (inputX < 0)//sola bakis y=180
         {
             GetComponent<SpriteRenderer>().flipX = true;
             m_facingDirection = -1;

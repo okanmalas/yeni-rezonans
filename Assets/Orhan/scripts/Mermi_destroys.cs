@@ -1,46 +1,47 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 
 public class MermiDestroys : MonoBehaviour
 {
     public GameObject mermi;
     public GameObject normalBlockPrefab;
-    private GameObject newNormalBlock;
-    public float time = 3f;
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("ghost"))
+        if (other.CompareTag("ozel_block"))
         {
-            Debug.Log("Hayalete deðdi");
+            Debug.Log("Mermi, Ã¶zel blokla Ã§arptÄ±");
 
-            // Hayaletle çarpýþma durumunda hayaleti yok et
-            Destroy(other.gameObject);
-            Destroy(mermi);
-        }
-        else if (other.CompareTag("ozel_block"))
-        {
-            Debug.Log("Mermi, özel blokla çarptý");
+            Destroy(gameObject);
 
-            Destroy(mermi);
-
-            // Özel bloðu yok et
+            // Ã–zel bloÄŸu yok et
             Destroy(other.gameObject);
 
-            // Yeni normal blok oluþtur ve üzerine yerleþtir
+            // Yeni normal blok oluÅŸtur ve Ã¼zerine yerleÅŸtir
             GameObject newNormalBlock = Instantiate(normalBlockPrefab, other.gameObject.transform.position, transform.rotation);
 
-            // 3 saniye sonra normal bloðu sil
-            StartCoroutine(DestroyNormalBlockAfterDelay(newNormalBlock, time));
+            // 3 saniye sonra normal bloÄŸu sil
+            //StartCoroutine(DestroyNormalBlockAfterDelay(newNormalBlock, 3.0f));
+        }
+       
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("map"))
+        {
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.CompareTag("ghost"))
+        {
+            Debug.Log("Hayalete deÄŸdi");
+
+            // Hayaletle Ã§arpÄ±ÅŸma durumunda hayaleti yok et
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 
-    private IEnumerator DestroyNormalBlockAfterDelay(GameObject normalBlock, float delay)
-    {
-        yield return new WaitForSeconds(delay);
 
-        // Normal block'u sil
-        Destroy(normalBlock);
-    }
 }
