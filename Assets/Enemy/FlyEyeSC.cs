@@ -5,23 +5,29 @@ using UnityEngine;
 public class FlyEyeSC : MonoBehaviour
 {
     [SerializeField]
-    private int hp = 25;
-    [SerializeField]
     private int damage = 90;
     [SerializeField]
     private float speed = 2.5f;
 
     [SerializeField]
     private EnemyData data;
+
     private GameObject player;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        SetEnemyValues();
     }
     private void Update()
     {
         FlyEye();
+    }
+    private void SetEnemyValues()
+    {
+        GetComponent<Health>().SetHealth(data.hp , data.hp);
+        damage = data.damage;
+        speed = data.speed;
     }
     // Update is called once per frame
     private void FlyEye()
