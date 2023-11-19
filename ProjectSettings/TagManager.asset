@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - ozel_block
   - ghost
+  - ozel_tag
   layers:
   - Default
   - TransparentFX
