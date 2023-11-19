@@ -21,12 +21,27 @@ public class Sensor_HeroKnight : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        m_ColCount++;
+        if (other.CompareTag("ozel_block"))
+        {
+            Debug.Log("özel blocka girdi");
+        }
+        else
+        {
+            m_ColCount++;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        m_ColCount--;
+        if (other.CompareTag("ozel_block"))
+        {
+            Debug.Log("özel blocktan çikti");
+        }
+        else
+        {
+            m_ColCount--;
+
+        }
     }
 
     void Update()
